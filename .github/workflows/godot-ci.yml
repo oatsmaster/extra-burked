@@ -7,8 +7,8 @@ env:
   PROJECT_PATH: source
   
 jobs:
-  export-web:
-    name: Web Export
+  export-HTML5:
+    name: HTML5 Export
     runs-on: ubuntu-20.04
     container:
       image: barichello/godot-ci:4.1
@@ -21,15 +21,15 @@ jobs:
         run: |
           mkdir -v -p ~/.local/share/godot/templates
           mv /root/.local/share/godot/templates/${GODOT_VERSION}.stable ~/.local/share/godot/templates/${GODOT_VERSION}.stable
-      - name: Web Build
+      - name: HTML5 Build
         run: |
-          mkdir -v -p build/web
-          godot -v --headless --path $PROJECT_PATH --export-release Web /build/web/index.html
+          mkdir -v -p build/HTML5
+          godot -v --headless --path $PROJECT_PATH --export-release HTML5 /build/HTML5/index.html
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
-          name: web
-          path: build/web
+          name: HTML5
+          path: build/HTML5
       - name: Install rsync 📚
         run: |
           apt-get update && apt-get install -y rsync
@@ -37,4 +37,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@releases/v4
         with:
           branch: gh-pages # The branch the action should deploy to.
-          folder: build/web # The folder the action should deploy.
+          folder: build/HTML5 # The folder the action should deploy.
