@@ -1,0 +1,5 @@
+res://assets/ZeroFriction.tres::96e74c8076ff7b464cbfa8f93589a3af::1689810928::res://.godot/exported/133200997/export-b3fe01b6d146f956973ef19f3c6e8aa1-ZeroFriction.res
+res://src/entities/Player.tscn::eb3bc39924f0abbd16175bb2b55e0fbd::1690585118::res://.godot/exported/133200997/export-6076bcdaedb52afa0255b96999cbc8e2-Player.scn
+res://src/levels/Test.tscn::263e4d046755a11fa3d5b8938b64ed77::1690585118::res://.godot/exported/133200997/export-b6ff9e28eee9f51628f249d0185c8946-Test.scn
+res://src/modules/PhysicsBase.tscn::f0bc061d44087272ee6d34c0be443c61::1690585118::res://.godot/exported/133200997/export-596db38de45f52b6cf8dbcd709cb4b7d-PhysicsBase.scn
+res://src/modules/PlayerCamera.tscn::f168f7fb38b10e658d53b0421d851ab8::1690146376::res://.godot/exported/133200997/export-e5ce5698d999fd9e41681679bea8c80b-PlayerCamera.scn

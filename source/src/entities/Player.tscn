@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqcvqbhqtxalv"]
+
+[ext_resource type="PackedScene" uid="uid://bhhfyscpopqkf" path="res://src/modules/PlayerCamera.tscn" id="1_eriy3"]
+[ext_resource type="PackedScene" uid="uid://br8j1k3s3lwpe" path="res://src/modules/PhysicsBase.tscn" id="2_bmr7n"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_qnmmo"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_3844c"]
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="PlayerCamera" parent="." node_paths=PackedStringArray("cameraHolder") instance=ExtResource("1_eriy3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+cameraHolder = NodePath("..")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_qnmmo")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_3844c")
+
+[node name="PhysicsBase" parent="." node_paths=PackedStringArray("playerBody") instance=ExtResource("2_bmr7n")]
+playerBody = NodePath("..")
