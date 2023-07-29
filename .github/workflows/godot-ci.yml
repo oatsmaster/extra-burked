@@ -24,12 +24,12 @@ jobs:
       - name: Web Build
         run: |
           mkdir -v -p build/web
-          godot -v --headless --path $PROJECT_PATH --export-release Web /build/web/index.html
+          godot -v --rendering-driver opengl3 --headless --path $PROJECT_PATH --export-release Web /build/web/index.html
       - name: Upload Artifact
         uses: actions/upload-artifact@v1
         with:
           name: web
-          path: $PROJECT_PATH
+          path: build/web
       - name: Install rsync 📚
         run: |
           apt-get update && apt-get install -y rsync
