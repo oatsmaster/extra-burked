@@ -1,6 +1,2 @@
-res://src/levels/Warehouse.tscn
-res://assets/FloorFriction.tres
-res://src/levels/Test.tscn
-res://src/modules/Scripts/PhysicsBase.gd
-res://src/entities/Player.tscn
-res://src/modules/Scripts/PlayerMovement.gd
+res://src/ui/bar/nine_patch_rect.tscn
+res://assets/themes/main_theme.tres

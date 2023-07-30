@@ -1,0 +1,25 @@
+[gd_resource type="Theme" load_steps=4 format=3 uid="uid://c0gn6t5nvmpn2"]
+
+[ext_resource type="FontFile" uid="uid://ho60mlmq5rvb" path="res://assets/fonts/MS Gothic.ttf" id="1_rwc5l"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mj7k4"]
+bg_color = Color(0, 0, 0, 0.423529)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yea6g"]
+bg_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[resource]
+default_font = ExtResource("1_rwc5l")
+default_font_size = 18
+ProgressBar/colors/font_outline_color = Color(0, 0, 0, 1)
+ProgressBar/constants/outline_size = 6
+ProgressBar/styles/background = SubResource("StyleBoxFlat_mj7k4")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_yea6g")

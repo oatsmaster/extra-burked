@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://cqcvqbhqtxalv" path="res://src/entities/Player.tscn" id="1_iqrb8"]
 [ext_resource type="PackedScene" uid="uid://k0k4vb12q14w" path="res://src/levels/Warehouse.tscn" id="2_rexet"]
-[ext_resource type="AudioStream" uid="uid://b7ecn36jaslpe" path="res://assets/music/beach.ogg" id="3_xx0ti"]
+[ext_resource type="PackedScene" uid="uid://ojcbgx7xjod1" path="res://src/ui/HUD.tscn" id="3_d0y1v"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0fpah"]
 
@@ -28,9 +28,4 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.04649, 4.08769, -7.67936)
 [node name="Warehouse" parent="." instance=ExtResource("2_rexet")]
 transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.158564, 0)
-stream = ExtResource("3_xx0ti")
-pitch_scale = 1.2
-autoplay = true
-max_distance = 20.0
+[node name="HUD" parent="." instance=ExtResource("3_d0y1v")]
