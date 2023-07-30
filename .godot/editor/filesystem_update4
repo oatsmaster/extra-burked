@@ -1,3 +1,6 @@
+res://src/levels/Warehouse.tscn
+res://assets/FloorFriction.tres
 res://src/levels/Test.tscn
-res://src/modules/PhysicsBase.tscn
+res://src/modules/Scripts/PhysicsBase.gd
 res://src/entities/Player.tscn
+res://src/modules/Scripts/PlayerMovement.gd

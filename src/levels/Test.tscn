@@ -1,33 +1,36 @@
-[gd_scene load_steps=6 format=3 uid="uid://t58tletukmeh"]
+[gd_scene load_steps=7 format=3 uid="uid://t58tletukmeh"]
 
 [ext_resource type="PackedScene" uid="uid://cqcvqbhqtxalv" path="res://src/entities/Player.tscn" id="1_iqrb8"]
-[ext_resource type="PackedScene" uid="uid://bii1klicefbpa" path="res://assets/map.glb" id="1_j2hp5"]
+[ext_resource type="PackedScene" uid="uid://k0k4vb12q14w" path="res://src/levels/Warehouse.tscn" id="2_rexet"]
+[ext_resource type="AudioStream" uid="uid://b7ecn36jaslpe" path="res://assets/music/beach.ogg" id="3_xx0ti"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_o2win"]
-sky_top_color = Color(0, 0.615686, 0.972549, 1)
-sky_horizon_color = Color(0.540196, 0.688235, 0.769608, 1)
-ground_bottom_color = Color(0.160784, 0.137255, 0.105882, 1)
-ground_horizon_color = Color(0.540196, 0.688235, 0.769608, 1)
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_0fpah"]
 
-[sub_resource type="Sky" id="Sky_kaev6"]
-sky_material = SubResource("ProceduralSkyMaterial_o2win")
+[sub_resource type="Sky" id="Sky_otfsy"]
+sky_material = SubResource("ProceduralSkyMaterial_0fpah")
 
 [sub_resource type="Environment" id="Environment_uy7ho"]
 background_mode = 2
-sky = SubResource("Sky_kaev6")
-tonemap_mode = 2
-glow_enabled = true
+sky = SubResource("Sky_otfsy")
 
 [node name="Test" type="Node3D"]
-
-[node name="map" parent="." instance=ExtResource("1_j2hp5")]
-transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_uy7ho")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.346072, 0.36088, 0, 0.72176, 0.692144, -0.5, 0.599414, -0.625062, 0, 0, 0)
+transform = Transform3D(-0.0900284, -0.753826, -0.650878, -0.401859, -0.570474, 0.716289, -0.911265, 0.326047, -0.251573, 0.321411, -0.582918, 0)
+sky_mode = 1
 
 [node name="Player" parent="." instance=ExtResource("1_iqrb8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.04649, 4.08769, -7.67936)
+
+[node name="Warehouse" parent="." instance=ExtResource("2_rexet")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.158564, 0)
+stream = ExtResource("3_xx0ti")
+pitch_scale = 1.2
+autoplay = true
+max_distance = 20.0

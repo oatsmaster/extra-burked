@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cqcvqbhqtxalv"]
+[gd_scene load_steps=6 format=3 uid="uid://cqcvqbhqtxalv"]
 
 [ext_resource type="PackedScene" uid="uid://bhhfyscpopqkf" path="res://src/modules/PlayerCamera.tscn" id="1_eriy3"]
 [ext_resource type="PackedScene" uid="uid://br8j1k3s3lwpe" path="res://src/modules/PhysicsBase.tscn" id="2_bmr7n"]
+[ext_resource type="Script" path="res://src/modules/Scripts/PlayerMovement.gd" id="3_es7ri"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_qnmmo"]
 
@@ -22,3 +23,10 @@ shape = SubResource("CapsuleShape3D_3844c")
 
 [node name="PhysicsBase" parent="." node_paths=PackedStringArray("playerBody") instance=ExtResource("2_bmr7n")]
 playerBody = NodePath("..")
+externalMovements = Array[GDScript]([ExtResource("3_es7ri")])
+gravity = null
+mass = null
+maxSpeed = null
+maxAcceleration = null
+jumpForce = null
+dragCoefficient = null

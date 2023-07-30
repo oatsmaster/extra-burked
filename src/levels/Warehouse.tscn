@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://k0k4vb12q14w"]
+
+[ext_resource type="PackedScene" uid="uid://bii1klicefbpa" path="res://assets/map.glb" id="1_exq25"]
+[ext_resource type="PhysicsMaterial" uid="uid://5m80re1uq3ma" path="res://assets/FloorFriction.tres" id="2_0tj2j"]
+
+[node name="Warehouse" instance=ExtResource("1_exq25")]
+
+[node name="StaticBody3D" parent="Plane" index="0"]
+physics_material_override = ExtResource("2_0tj2j")
