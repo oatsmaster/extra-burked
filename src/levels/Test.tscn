@@ -27,7 +27,7 @@ transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
 environment = SubResource("Environment_uy7ho")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
-transform = Transform3D(-0.866025, -0.346072, 0.36088, 0, 0.72176, 0.692143, -0.5, 0.599414, -0.625063, 0, 0, 0)
+transform = Transform3D(-0.866025, -0.346072, 0.36088, 0, 0.72176, 0.692144, -0.5, 0.599414, -0.625062, 0, 0, 0)
 
 [node name="Player" parent="." instance=ExtResource("1_iqrb8")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.265147, 8.24652, -1.15599)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.1429, 4.08769, -7.67936)
