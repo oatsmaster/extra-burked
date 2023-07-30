@@ -1,15 +1,18 @@
 name: "godot-ci export"
 on: push
 
+permissions:
+  contents: write
+
 env:
-  GODOT_VERSION: 4.0.3
+  GODOT_VERSION: 4.1.1
 
 jobs:
   export-web:
     name: Web Export
     runs-on: ubuntu-20.04
     container:
-      image: barichello/godot-ci:4.0.3
+      image: barichello/godot-ci:4.1.1
     steps:
       - name: Checkout
         uses: actions/checkout@v2
