@@ -10,14 +10,14 @@ config_version=5
 
 [application]
 
-config/name="Incarceration Evaders"
+config/name="Extra Burked"
 run/main_scene="res://src/levels/Test.tscn"
 config/features=PackedStringArray("4.1")
 config/icon="res://icon.png"
 
 [dotnet]
 
-project/assembly_name="Incarceration Evaders"
+project/assembly_name="Extra Burked"
 
 [gui]
 
@@ -53,7 +53,7 @@ jump={
 
 [mono]
 
-project/assembly_name="Incarceration Evaders"
+project/assembly_name="Extra Burked"
 
 [physics]
 
